@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+  <p>1.Write a function that takes an array of numbers and returns a new array containing only the even numbers.</p>
+<script>      
+ function getEvenNumber(numbers){
+  let EvenNumber=[];
+  for(let i=0;i<numbers.length;i++){
+    if(numbers[i]%2==0){
+        EvenNumber.push(numbers[i]);
+    }
+  } 
+  return EvenNumber;
+ }
+        let numbers=[1,2,3,4,5,6,7,8,9];
+       console.log(getEvenNumber(numbers));
+    </script>
+ <p>Create an object representing a person with properties such as name, age, and email.</p>
+    <p> Write a function that takes an array of these objects and returns a new array containing only the people who are over 30 years ol</p> 
+  <script>
+   let person={
+    name:'John',
+    age:35,
+    email:'john@example.com'
+   }
+
+   function getOldPeople(people){
+    let oldPeople=[];
+    for(let i=0;i<people.length;i++){
+        if(people[i].age>30){
+            oldPeople.push(people[i]);
+        }
+    }
+    return oldPeople;
+   }
+
+   let people=[
+    {name: 'John', age: 35, email: 'john@example.com'},
+    {name: 'Mike', age: 25, email: 'mike@example.com'},
+    {name: 'Jessica', age: 40, email: 'jessica@example.com'},
+    {name: 'Emma', age: 20, email: 'emma@example.com'},
+   ]
+   console.log(getOldPeople(people))
+  </script>
+  <p>Implement a stack data structure in JavaScript using an array.</p>
+  <script>
+    //stack (first in last out)
+    const stack=[]
+    stack.push(1);
+    stack.push(2);
+    stack.push(5);
+    console.log(stack);
+    stack.pop();
+    console.log(stack);
+    stack.pop()
+    console.log(stack)
+  </script>
+  <p>Implement a queue data structure in JavaScript using an array.</p>
+   <script>
+    const queue=[];
+    queue.push('liti');
+    queue.push('lili');
+    queue.push('lulu');
+    queue.push('lala');
+    console.log(queue);
+    queue.pop();
+    console.log(queue);
+    queue.pop();
+    console.log(queue);
+   </script>
+   <p>Write a function that takes a string as input and returns a new string with all the vowels removed.</p>
+   <script>
+    function removeVowels(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        if ('aeiou'.indexOf(str[i].toLowerCase()) === -1) {
+            result += str[i];
+        }
+    }
+    return result;
+  }
+
+   console.log(removeVowels("Hello World")); 
+   console.log(removeVowels("I am a developer")); 
+   console.log(removeVowels("This is a test"));
+   </script>
+   <p>Given two arrays of numbers, write a function that returns a new array containing the unique elements from both arrays.</p>
+   <script>
+    function getUniqueNumbers(arr1, arr2) {
+    let result = [...arr1, ...arr2];
+    let unique = [...new Set(result)];
+    return unique;
+   }
+
+    let arr1 = [1, 2, 3, 4, 5];
+    let arr2 = [5, 6, 7, 8, 9];
+
+    console.log(getUniqueNumbers(arr1, arr2)); 
+
+    arr1 = [1, 2, 3, 4, 5];
+    arr2 = [5, 5, 5, 6, 7, 8, 9];
+
+    console.log(getUniqueNumbers(arr1, arr2)); 
+
+    arr1 = [1, 1, 1, 2, 3, 4, 5];
+    arr2 = [1, 5, 6, 7, 8, 9];
+
+    console.log(getUniqueNumbers(arr1, arr2));
+
+    arr1 = [1, 1, 1, 2, 3, 4, 5];
+    arr2 = [5, 5, 5, 5, 6, 7, 8, 9];
+
+    console.log(getUniqueNumbers(arr1, arr2));
+   </script>
+</body>
+</html>
